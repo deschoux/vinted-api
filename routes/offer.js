@@ -21,8 +21,8 @@ router.post(
       const { description, price, condition, city, brand, size, color, title } =
         req.body;
 
-      const picture = req.files.product_picture;
-
+      const picture = req.files.picture;
+      console.log(req.files);
       const cloudinaryResponse = await cloudinary.uploader.upload(
         convertToBase64(picture)
       );
